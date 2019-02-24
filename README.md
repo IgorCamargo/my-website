@@ -1,4 +1,6 @@
-# igor-camargo
+# my-website
+
+This project is about my website, using only Vuejs.
 
 ## Project setup
 ```
