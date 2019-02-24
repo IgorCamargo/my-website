@@ -24,7 +24,6 @@ export default {
 
 <style scoped lang="scss">
 #name {
-  background-color: yellow;
   display: flex;
   align-items: center;
   justify-content: center;
