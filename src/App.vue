@@ -18,6 +18,9 @@
   text-decoration: none;
   color: #000;
 }
+body {
+  background-color: #191919;
+}
 #app {
   position: relative;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -25,14 +28,4 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-// #nav {
-//   padding: 30px;
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
 </style>

@@ -1,8 +1,13 @@
 <template>
   <div id="home">
     <Name msg="Igor Felipe de Camargo"/>
-    <LinkScroll/>
-    <Work/>
+    <LinkScroll
+      :bottom="bottom"
+      :angleComponent="angleComponent"
+    />
+    <Work
+      :percPosition="percPosition"
+    />
   </div>
 </template>
 
@@ -18,6 +23,29 @@ export default {
     Name,
     LinkScroll,
     Work,
+  },
+  data () {
+    return {
+      percPosition: 0,
+      lengthPosition: 0,
+      angleComponent: 0,
+      bottom: 50,
+    };
+  },
+  created () {
+    let html = document.documentElement;
+    this.lengthPosition = html.clientHeight;
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      let scrolly = window.scrollY;
+
+      this.percPosition = (100*scrolly)/this.lengthPosition;
+      this.angleComponent = (this.percPosition*180)/100;
+    }
   }
 }
 </script>
@@ -25,11 +53,6 @@ export default {
 <style scoped lang="scss">
 #home {
   position: relative;
-  // width: 100vw;
-  // height: 100vh;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   & #name, & #work {
     height: 100vh;
   }

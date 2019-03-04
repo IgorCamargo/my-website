@@ -1,15 +1,29 @@
 <template>
   <section id="work">
+    <h1
+      :style="{ opacity: this.opacity }"
+    >Trabalhos:</h1>
     <div class="">
-      <a href="#">
-        <img src="../assets/logo.png" alt="">
-      </a>
-      <a href="#">
-        <img src="../assets/logo.png" alt="">
-      </a>
-      <a href="#">
-        <img src="../assets/logo.png" alt="">
-      </a>
+
+      <div class="links-work">
+        <a href="#">
+          <img src="../assets/logo.png" alt="">
+          <p>Lorem Ipsum</p>
+        </a>
+      </div>
+      <div class="links-work">
+        <a href="#">
+          <img src="../assets/logo.png" alt="">
+          <p>Lorem Ipsum</p>
+        </a>
+      </div>
+      <div class="links-work">
+        <a href="#">
+          <img src="../assets/logo.png" alt="">
+          <p>Lorem Ipsum</p>
+        </a>
+      </div>
+
     </div>
   </section>
 </template>
@@ -17,18 +31,41 @@
 <script>
 export default {
   name: 'Work',
+  props: ['percPosition'],
+  data () {
+    return {
+      opacity: 0,
+    }
+  },
+  watch: {
+    percPosition: function () {
+      this.opacity = this.percPosition / 100;
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
 #work {
-  background-color: darkred;
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  & img {
-    width: 100px;
-    margin: 15px;
+  & h1 {
+    position: absolute;
+    top: 6vh;
+    font-size: 35px;
+  }
+  & .links-work {
+    position: relative;
+    display: inline-block;
+    margin: 15px 30px;
+    & img {
+      width: 100px;
+    }
+    & p {
+      color: white;
+    }
   }
 }
 </style>

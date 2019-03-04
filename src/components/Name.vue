@@ -27,13 +27,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  .content-name {
-    p {
+  background-color: white;
+  & .content-name {
+    & p {
       font-size: 42px;
     }
-    .link-contact {
-      // background-color: #eee;
-      a {
+    & .link-contact {
+      & a {
         color: #555;
       }
       & :before {
