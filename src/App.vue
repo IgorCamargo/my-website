@@ -17,9 +17,10 @@
   list-style: none;
   text-decoration: none;
   color: #000;
+  font-family: 'Raleway', sans-serif;
 }
 body {
-  background-color: #191919;
+  background-color: #5f5f5f; // #191919;
 }
 #app {
   position: relative;

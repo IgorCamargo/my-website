@@ -45,4 +45,13 @@ export default {
     }
   }
 }
+@media screen and (max-width: 500px) {
+  #name {
+    & .content-name {
+      & p {
+        font-size: 26px;
+      }
+    }
+  }
+}
 </style>

@@ -1,26 +1,27 @@
 <template>
   <section id="work">
-    <h1
+    <div
+      class="links-title"
       :style="{ opacity: this.opacity }"
-    >Trabalhos:</h1>
-    <div class="">
+    >Trabalhos:</div>
+    <div class="link-items">
 
       <div class="links-work">
-        <a href="#">
-          <img src="../assets/logo.png" alt="">
-          <p>Lorem Ipsum</p>
+        <a href="http://www.eduardosparremberger.com.br/" target="_blank">
+          <img src="../assets/works/eduardo-sparremberger.png" alt="">
+          <p>Eduardo Sparremberger</p>
         </a>
       </div>
       <div class="links-work">
-        <a href="#">
-          <img src="../assets/logo.png" alt="">
-          <p>Lorem Ipsum</p>
+        <a href="http://www.equipevirtus.com.br/" target="_blank">
+          <img src="../assets/works/virtus.png" alt="">
+          <p>Equipe Virtus</p>
         </a>
       </div>
       <div class="links-work">
-        <a href="#">
-          <img src="../assets/logo.png" alt="">
-          <p>Lorem Ipsum</p>
+        <a href="#" target="_blank">
+          <img src="../assets/works/mundo-verde.png" alt="">
+          <p>Mundo Verde Paisagismo</p>
         </a>
       </div>
 
@@ -51,20 +52,40 @@ export default {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  & h1 {
+  & .links-title {
     position: absolute;
     top: 6vh;
     font-size: 35px;
   }
-  & .links-work {
-    position: relative;
-    display: inline-block;
-    margin: 15px 30px;
-    & img {
-      width: 100px;
+  & .link-items {
+    display: flex;
+    align-items: center;
+    & .links-work {
+      position: relative;
+      display: inline-block;
+      margin: 15px 30px;
+      & img {
+        width: 100px;
+      }
+      & p {
+        color: white;
+        width: 100px;
+      }
     }
-    & p {
-      color: white;
+  }
+}
+@media screen and (max-width: 500px) {
+  #work {
+    & .links-title {
+      top: 4vh;
+      font-size: 26px;
+    }
+    & .link-items {
+      display: block;
+      align-items: center;
+      & p {
+        font-size: 14px;
+      }
     }
   }
 }
